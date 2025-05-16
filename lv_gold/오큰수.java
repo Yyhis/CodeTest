@@ -1,3 +1,4 @@
+package lv_gold;
 import java.util.*;
 import java.io.*;
 

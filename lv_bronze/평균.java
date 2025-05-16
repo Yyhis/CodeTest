@@ -1,3 +1,4 @@
+package lv_bronze;
 import java.util.*;
 
 // 1546
