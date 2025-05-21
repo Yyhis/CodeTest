@@ -1,5 +1,6 @@
 package lv_gold;
 
+
 import java.util.*;
 import java.io.*;
 
@@ -20,15 +21,15 @@ public class 오큰수 {
         }
 
         for(int i = 0; i < N; i++) {
-            while(!stack.isEmpty() && result[stack.peekLast()] <= result[i]) {
-                result[stack.pop()] = result[i];
+            while(!stack.isEmpty() && result[stack.peekLast()] < result[i]) {
+                result[stack.removeLast()] = result[i];
             }
 
-            stack.add(i);
+            stack.addLast(i);
         }
 
         while(!stack.isEmpty()) {
-            result[stack.pop()] = -1;
+            result[stack.removeLast()] = -1;
         }
 
 
