@@ -1,4 +1,3 @@
-package lv_silver;
 import java.util.*;
 
 public class 카드2 {

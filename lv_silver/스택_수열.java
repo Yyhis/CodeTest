@@ -1,4 +1,3 @@
-package lv_silver;
 import java.util.*;
 
 // 1874
