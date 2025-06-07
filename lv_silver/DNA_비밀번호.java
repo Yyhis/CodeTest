@@ -39,7 +39,7 @@ public class DNA_비밀번호 {
         for (int i = 0; i <4; i++) {
             check[i] = Integer.parseInt(st.nextToken());
         }
- 
+
         // 맨 처음 문자 조합 저장
         for (int i = 0; i < P; i++) {
             if(pw[i] == 'A') currNum[0]++;

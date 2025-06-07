@@ -23,10 +23,11 @@ public class k번째수 {
     }
 
     public static void quickSort(int[] a, int start, int end, int K) {
-        if (start >= end) {
+        if (start>= end) {
             return;  // 종료 조건
         }
         int pivot = partition(a, start, end);
+
         // pivot == k
         if (pivot == K) {
             return;
@@ -41,6 +42,10 @@ public class k번째수 {
     }
 
     public static int partition(int[] a, int start, int end) {
+        if(start + 1 == end) {
+            if (a[start] > a[end]) swap(a, start, end);
+            return end;
+        }
         int M = (start + end) / 2;
         swap(a, start, M);  // 중앙값을 시작점으로 이동
 
@@ -49,10 +54,12 @@ public class k번째수 {
         int j = end;
 
         while(i <= j) {
+            // 2개 다 무조건 작동을 안해서 
             while(j >= start + 1 && a[j] > pivot) j--;
             while(i <= end && a[i] < pivot) i++;
-            if (i <= j) {
-                swap(a, i, j);
+
+            if (i <= j) {   
+                swap(a, i++, j--);
             }
         }
         a[start] = a[j];
