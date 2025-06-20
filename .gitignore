@@ -1,4 +1,6 @@
 .cph
 .cphcsrun
 
+.class
+.DS_Store
 bin
